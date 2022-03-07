@@ -1,6 +1,10 @@
-import 'package:basic_architecture_riverpod/constants/text_styles.dart';
-import 'package:basic_architecture_riverpod/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:sanjeevi_devfolio/common_widgets/commonButtons.dart';
+import 'package:sanjeevi_devfolio/common_widgets/onHover.dart';
+import 'package:sanjeevi_devfolio/common_widgets/onHoverAnimationButton.dart';
+import 'package:sanjeevi_devfolio/constants/size_constants.dart';
+import 'package:sanjeevi_devfolio/constants/text_styles.dart';
+import 'package:sanjeevi_devfolio/themes/app_theme.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -22,32 +26,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   'Hello, I\'m',
                   style: TextStyles.subHeading,
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 5),
                 Text('Sanjeevi Raj',
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 45,
                         letterSpacing: 1.0,
                         color: Colors.black)),
-                SizedBox(height: 15),
+                SizedBox(height: 5),
                 Text('Flutter Developer', style: TextStyles.subHeading),
                 SizedBox(height: 20),
                 Row(
                   children: [
-                    MaterialButton(
-                      padding: EdgeInsets.all(10),
-                      hoverElevation: 10,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
+                    CommonButton(
+                      text: 'More About Me',
                       onPressed: () {},
-                      child: Text('PortFolio'),
-                      color: AppTheme.pinkColor,
+                      // width: Sizes.dimen_150,
                     ),
-                    MaterialButton(
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CommonButton(
+                      text: 'Portfolio',
                       onPressed: () {},
-                      child: Text('More About Me'),
-                      color: AppTheme.pinkColor,
                     )
                   ],
                 )

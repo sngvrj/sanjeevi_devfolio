@@ -1,10 +1,10 @@
-import 'package:basic_architecture_riverpod/constants/languages.dart';
-import 'package:basic_architecture_riverpod/locale/app_localization.dart';
-import 'package:basic_architecture_riverpod/routing/routes.dart';
-import 'package:basic_architecture_riverpod/themes/app_theme.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:sanjeevi_devfolio/routing/routes.dart';
 
+import 'constants/languages.dart';
+import 'locale/app_localization.dart';
 import 'routing/route_constants.dart';
 import 'fade_page_route_builder.dart';
 
@@ -35,7 +35,7 @@ class _AppState extends State<App> {
         }
         return supportedLocales.first;
       },
-      theme: AppTheme.lightTheme,
+      // theme: AppTheme.lightTheme,
       initialRoute: RouteConstants.initial,
       onGenerateRoute: (RouteSettings settings) {
         final routes = Routes.getRoutes(settings);

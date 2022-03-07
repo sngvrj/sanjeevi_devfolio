@@ -1,5 +1,5 @@
-import 'package:basic_architecture_riverpod/locale/app_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:sanjeevi_devfolio/locale/app_localization.dart';
 
 extension StringExtension on String{
    String t(BuildContext context){

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:basic_architecture_riverpod/constants/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sanjeevi_devfolio/constants/languages.dart';
 
 class AppLocalizations{
   final Locale locale;

@@ -1,4 +1,5 @@
-import 'package:basic_architecture_riverpod/entities/language_entity.dart';
+
+import 'package:sanjeevi_devfolio/entities/language_entity.dart';
 
 class Languages{
   Languages._();

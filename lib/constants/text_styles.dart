@@ -1,5 +1,5 @@
-import 'package:basic_architecture_riverpod/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:sanjeevi_devfolio/themes/app_theme.dart';
 
 //! All the text styles used in the app
 class TextStyles {

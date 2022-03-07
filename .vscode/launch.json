@@ -7,7 +7,13 @@
         {
             "name": "sanjeevi_devfolio",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "-d",
+                "chrome",
+                "--web-renderer",
+                "html"
+              ]
         }
     ]
 }

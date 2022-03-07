@@ -1,8 +1,9 @@
-import 'package:basic_architecture_riverpod/app/home/widgets/demo_glassmorphism.dart';
-import 'package:basic_architecture_riverpod/app/home/widgets/plasma_background.dart';
-import 'package:basic_architecture_riverpod/themes/app_theme.dart';
-
 import 'package:flutter/material.dart';
+import 'package:sanjeevi_devfolio/animations/backGroundBubbles.dart';
+import 'package:sanjeevi_devfolio/animations/background_animation.dart';
+import 'package:sanjeevi_devfolio/app/home/widgets/demo_glassmorphism.dart';
+import 'package:sanjeevi_devfolio/app/home/widgets/plasma_background.dart';
+import 'package:sanjeevi_devfolio/themes/app_theme.dart';
 
 import 'main_screen_content.dart';
 
@@ -14,6 +15,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
+    print('MainScreen --> Rebuilds');
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -32,10 +34,12 @@ class _MainScreenState extends State<MainScreen> {
       height: size.height,
       child: Stack(
         children: [
-          PlasmaBackground(),
+          // Bubbles(),
+          // BackgroundBubbles(),
+          // PlasmaBackground(),
           Center(
               child: GlassMorphism(
-            height: size.height - 70,
+            height: size.height - 50,
             width: size.width - 150,
             child: MainScreenContent(),
           )),

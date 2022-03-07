@@ -1,9 +1,10 @@
-import 'package:basic_architecture_riverpod/animations/animation_controller.dart';
-import 'package:basic_architecture_riverpod/app/home/controllers/home_screen_content_controller.dart';
-import 'package:basic_architecture_riverpod/app/home/home_screen.dart';
-import 'package:basic_architecture_riverpod/common_widgets/drawer/drawer.dart';
-import 'package:basic_architecture_riverpod/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:sanjeevi_devfolio/animations/animation_controller.dart';
+import 'package:sanjeevi_devfolio/app/home/controllers/home_screen_content_controller.dart';
+import 'package:sanjeevi_devfolio/common_widgets/drawer/drawer.dart';
+import 'package:sanjeevi_devfolio/themes/app_theme.dart';
+
+import 'home_screen.dart';
 
 class MainScreenContent extends StatefulWidget {
   @override
@@ -36,9 +37,6 @@ class _MainScreenContentState
                 return Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    // crossAxisAlignment: CrossAxisAlignment.start,
-                    // fit: StackFit.expand,
                     children: [
                       Row(
                           mainAxisAlignment: MainAxisAlignment.end,

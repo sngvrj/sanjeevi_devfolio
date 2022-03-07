@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -23,25 +22,25 @@ class AppTheme {
 
   const AppTheme._();
 
-  static final lightTheme = ThemeData(
-      brightness: Brightness.light,
-      primaryColor: lightPrimaryColor,
-      accentColor: lightAccentColor,
-      backgroundColor: lightBackgroundColor,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-      fontFamily: 'Helvetica Neue',
-      splashColor: Colors.transparent,
-      highlightColor: Colors.transparent,
-      hoverColor: Colors.transparent);
+  // static final lightTheme = ThemeData(
+  //     brightness: Brightness.light,
+  //     primaryColor: lightPrimaryColor,
+  //     accentColor: lightAccentColor,
+  //     backgroundColor: lightBackgroundColor,
+  //     visualDensity: VisualDensity.adaptivePlatformDensity,
+  //     fontFamily: 'Helvetica Neue',
+  //     splashColor: Colors.transparent,
+  //     highlightColor: Colors.transparent,
+  //     hoverColor: Colors.transparent);
 
-  static final darkTheme = ThemeData(
-      brightness: Brightness.dark,
-      primaryColor: darkPrimaryColor,
-      accentColor: darkAccentColor,
-      backgroundColor: darkBackgroundColor,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-      fontFamily: 'Helvetica Neue',
-      splashColor: Colors.transparent,
-      highlightColor: Colors.transparent,
-      hoverColor: Colors.transparent);
+  // static final darkTheme = ThemeData(
+  //     brightness: Brightness.dark,
+  //     primaryColor: darkPrimaryColor,
+  //     accentColor: darkAccentColor,
+  //     backgroundColor: darkBackgroundColor,
+  //     visualDensity: VisualDensity.adaptivePlatformDensity,
+  //     fontFamily: 'Helvetica Neue',
+  //     splashColor: Colors.transparent,
+  //     highlightColor: Colors.transparent,
+  //     hoverColor: Colors.transparent);
 }
