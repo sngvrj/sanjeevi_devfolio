@@ -1,11 +1,15 @@
-
 import 'package:flutter/material.dart';
 import 'package:sanjeevi_devfolio/common_widgets/drawer/drawer_controller.dart';
 import 'package:sanjeevi_devfolio/themes/app_theme.dart';
 
+import 'package:go_router/go_router.dart';
+
 import '../onHoverAnimationButton.dart';
 
 class CustomDrawer extends StatefulWidget {
+  const CustomDrawer({Key? key, required this.tabOnPressed}) : super(key: key);
+  final Function? tabOnPressed;
+
   @override
   _CustomDrawerState createState() => _CustomDrawerState();
 }
@@ -55,7 +59,6 @@ class _CustomDrawerState extends State<CustomDrawer>
         animation: _controller,
         builder: (context, snapshot) {
           return Container(
-            
             // color: Colors.transparent,
             child: Stack(
               fit: StackFit.expand,
@@ -102,16 +105,49 @@ class _CustomDrawerState extends State<CustomDrawer>
               ),
             );
           },
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 36.0, vertical: 16),
-            child: OnHoverButton(builder: (isHovered) {
-              final color =
-                  isHovered ? AppTheme.pinkColor : AppTheme.blackColor;
-              return Text(_controller.menuTitle[i],
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500, fontSize: 34, color: color));
-            }),
+          child: GestureDetector(
+            onTap:
+                // widget.tabOnPressed,
+                () {
+              debugPrint('Pop Pressed');
+widget.tabOnPressed!();
+              switch (i) {
+                case 0:
+                  // context.pop();
+                  
+                  context.go('/home');
+                  break;
+                case 1:
+                  // context.pop();
+                  // widget.tabOnPressed;
+                  context.go('/about');
+                  break;
+                case 2:
+                  // context.pop();
+                  // widget.tabOnPressed;
+                  context.go('/portfolio');
+                  break;
+                case 3:
+                  // widget.tabOnPressed;
+                  // context.pop();
+                  context.go('/contact');
+                  break;
+              }
+            },
+            child: Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 36.0, vertical: 16),
+              child: OnHoverButton(builder: (isHovered) {
+                final color =
+                    isHovered ? AppTheme.pinkColor : AppTheme.blackColor;
+                return Text(_controller.menuTitle[i],
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 34,
+                        color: color));
+              }),
+            ),
           ),
         ),
       );

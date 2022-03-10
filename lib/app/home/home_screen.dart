@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sanjeevi_devfolio/common_widgets/commonButtons.dart';
 import 'package:sanjeevi_devfolio/common_widgets/onHover.dart';
 import 'package:sanjeevi_devfolio/common_widgets/onHoverAnimationButton.dart';
@@ -48,7 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     CommonButton(
                       text: 'Portfolio',
-                      onPressed: () {},
+                      onPressed: () {
+
+                  context.go('/portfolio');
+                      },
                     )
                   ],
                 )
